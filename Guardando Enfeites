@@ -1,0 +1,30 @@
+<?php
+
+$n = intval(fgets(STDIN));
+$confianças = [];
+
+for ($i = 0; $i < $n; $i++) {
+    $linha = explode(" ", fgets(STDIN));
+    $confianças[$i] = array_map('intval', $linha);
+}
+
+$melhorOrdem = [];
+$maxConfiança = 0;
+
+for ($i = 0; $i < $n; $i++) {
+    for ($j = 0; $j < $n; $j++) {
+        $confiançaAtual = 1;
+        for ($k = 0; $k < $n; $k++) {
+            $confiançaAtual *= $confianças[$k][$i];
+        }
+
+        if ($confiançaAtual > $maxConfiança) {
+            $maxConfiança = $confiançaAtual;
+            $melhorOrdem[] = $i;
+        }
+    }
+}
+
+echo implode(" ", $melhorOrdem) . "\n";
+
+?>
