@@ -1,0 +1,56 @@
+<?php
+$total_brinquedos = 1; 
+altura_do_carlitos = 100;
+alturas_permitidas = [100];
+quantidade_permitida = 0;
+
+foreach ($alturas_permitidas as $altura) {
+    if ($altura_do_carlitos >= $altura) {
+        $quantidade_permitida++;
+    }
+}
+
+echo $quantidade_permitida;
+?>
+
+<?php
+$total_brinquedos = 6; 
+altura_do_carlitos = 120;
+alturas_permitidas = [200, 90, 100, 123, 120, 169];
+quantidade_permitida = 0;
+
+foreach ($alturas_permitidas as $altura) {
+    if ($altura_do_carlitos >= $altura) {
+        $quantidade_permitida++;
+    }
+}
+
+echo $quantidade_permitida;
+?>
+
+<?php
+capacidade_cabine = 10;
+total_alunos = 20;
+
+total_viagens = ceil($total_alunos / (capacidade_cabine - 1));
+
+echo $total_viagens;
+?>
+
+<?php
+capacidade_cabine = 12;
+total_alunos = 55;
+
+total_viagens = ceil($total_alunos / (capacidade_cabine - 1));
+
+echo $total_viagens;
+?>
+
+<?php
+capacidade_cabine = 100;
+total_alunos = 87;
+
+total_viagens = ceil($total_alunos / (capacidade_cabine - 1));
+
+echo $total_viagens;
+?>
