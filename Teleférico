@@ -1,0 +1,14 @@
+<?php
+$C = intval(fgets(STDIN));
+$A = intval(fgets(STDIN));
+
+$viagens = 0;
+$alunosRestantes = $A;
+
+while ($alunosRestantes > 0) {
+    $alunosRestantes -= ($C - 1);
+    $viagens++;
+}
+
+echo $viagens . "\n";
+?>
